@@ -16,7 +16,7 @@ def get_requirements(file_path:str)->List[str]:
 
 
 setup(
-    name='Credit_Card_Default_Prediction ',
+    name='Credit_Card_Default_Prediction',
     version='0.0.1',
     author='Dynamic Project Group',
     author_email='nayakswadhingyanajyoti@gmail.com',
