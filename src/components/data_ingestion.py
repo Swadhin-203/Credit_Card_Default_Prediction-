@@ -1,6 +1,7 @@
 import sys
 import os
 from src.logger import logging
+from src.utils import read_yaml
 from src.exception import CustomException
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -16,9 +17,11 @@ class DataIngestionconfig:
 class DataIngestion:
    def __init__(self) -> None:
       self.ingestion_config = DataIngestionconfig()
+      self.schema = read_yaml('SCHEMA.yaml')
 
    def initiate_data_ingestion(self):
       logging.info('Data Ingestion method starts')
+      target = self.schema['target']
       try:
          df = pd.read_csv(os.path.join('notebooks/data','Credit_Card.csv'))
          logging.info("Dataset read as pandas Dataframe")
@@ -27,6 +30,15 @@ class DataIngestion:
          df.to_csv(self.ingestion_config.raw_data_path,index=False)
 
          logging.info('Raw data is created')
+         target = target['name']
+         X = df.drop(target, axis=1)
+         y = df[target]
+         
+         # balancing the target class
+         from imblearn.combine import SMOTETomek
+         resampler = SMOTETomek(random_state=42)
+         X , y = resampler.fit_resample(X, y)
+         df=pd.concat([X, y],axis=1)        
 
          train_set , test_set = train_test_split(df,test_size=0.3 , random_state=42)
          train_set.to_csv(self.ingestion_config.train_data_path,index =False,header = True)
