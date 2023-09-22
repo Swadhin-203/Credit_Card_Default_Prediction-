@@ -4,4 +4,4 @@ seaborn
 flask
 scikit-learn
 PyYAML
-#-e .
+# -e .
