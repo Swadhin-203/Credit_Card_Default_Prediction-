@@ -4,4 +4,11 @@ seaborn
 flask
 scikit-learn
 PyYAML
+<<<<<<< HEAD
 # -e .
+=======
+imblearn
+mlflow
+streamlit
+#-e .
+>>>>>>> f1acaab250510cf3777469faceae680e9047887b
