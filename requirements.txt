@@ -7,4 +7,4 @@ PyYAML
 imblearn
 mlflow
 streamlit
-#-e .
+-e .
