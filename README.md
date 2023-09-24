@@ -1,4 +1,4 @@
-# **End to end CreditCardFraud1 Detection Project**
+# **CreditCardFraud Detection Project**
 
 How to run the project:
 1. Create a new conda environment with the following command:
@@ -16,23 +16,31 @@ conda activate venv/
 ```bash
 pip install -r requirements.txt
 ```
+4. Export the following parameters
 
-4. Run the training pipeline to train the model and create the artifacts:
+```bash
+export MLFLOW_TRACKING_USERNAME=tejas05in
+```
+```bash
+export MLFLOW_TRACKING_PASSWORD=9efcb5c7b79d0e949378459b922b1462a80fa413
+```
+
+5. Run the training pipeline to train the model and create the artifacts:
 ```bash
 python src/pipelines/training_pipeline.py
 ```
 
-5. Mlflow ui can be accessed by running: (Optional)
+6. Mlflow ui can be accessed by running: (Optional)
 ```bash
 mlflow ui
 ```
 
-6. Run:
+7. Run:
 ```bash
 streamlit run application.py ## initiates streamlit application
 ```
 
-7. Go to:
+8. Upload data:
 ```
 Upload csv file to get the results
 ```
@@ -43,12 +51,3 @@ Upload csv file to get the results
 MLFLOW_TRACKING_URI=https://dagshub.com/Swadhin-203/Credit_Card_Default_Prediction-.mlflow
 ```
 
-export the following parameters
-
-
-```bash
-export MLFLOW_TRACKING_USERNAME=tejas05in
-```
-```bash
-export MLFLOW_TRACKING_PASSWORD=9efcb5c7b79d0e949378459b922b1462a80fa413
-```

@@ -53,6 +53,7 @@ class ModelTrainer:
                 obj=model
             )
             # log_artifact(local_path=self.model_trainer_config.trained_model_file_path)
+            mlflow.end_run()
             logging.info("Model training complete and model saved in artifacts as model.pkl")
         except Exception as e:
             raise CustomException(e, sys)
