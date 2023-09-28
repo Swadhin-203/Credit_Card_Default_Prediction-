@@ -51,3 +51,7 @@ Upload csv file to get the results
 MLFLOW_TRACKING_URI=https://dagshub.com/Swadhin-203/Credit_Card_Default_Prediction-.mlflow
 ```
 
+#### Docker image
+```docker
+docker pull tejas05in/ccfapp
+```
