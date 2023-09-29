@@ -58,3 +58,10 @@ MLFLOW_TRACKING_URI=https://dagshub.com/Swadhin-203/Credit_Card_Default_Predicti
 ```docker
 docker pull tejas05in/ccfapp
 ```
+## Contributors 🚀
+
+A big thank you to all the wonderful people who have contributed to this project! 🙌
+
+- [Swadhin Gyanajyoti Nayak🌟](https://github.com/Swadhin-203)
+- [Tejas J 🤗](https://github.com/tejas05in)
+- [Contributor 3 🎉](https://github.com/Contributor3)
