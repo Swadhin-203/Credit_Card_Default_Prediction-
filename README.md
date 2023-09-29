@@ -54,3 +54,7 @@ MLFLOW_TRACKING_URI=https://dagshub.com/Swadhin-203/Credit_Card_Default_Predicti
 
 
 
+#### Docker image
+```docker
+docker pull tejas05in/ccfapp
+```
