@@ -1,18 +1,9 @@
 pandas
 numpy
 seaborn
-flask
 scikit-learn
 PyYAML
-<<<<<<< HEAD
-# -e .
-=======
 imblearn
 mlflow
 streamlit
-<<<<<<< HEAD
-#-e .
->>>>>>> f1acaab250510cf3777469faceae680e9047887b
-=======
 -e .
->>>>>>> 5fb8599c9c454e24b30d2dc337606a73ae083604
